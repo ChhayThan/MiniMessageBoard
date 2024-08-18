@@ -10,6 +10,11 @@
         <h2><%= message.added %></h2>
         <p><%= message.text %></p>
       </div>
+      <a
+        href=" <%=`/${message.user}/${message.added}/${message.text}` %> "
+        class="messageBtn"
+        >Open message</a
+      >
       <% }) %>
     </div>
   </body>

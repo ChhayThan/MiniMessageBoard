@@ -32,4 +32,13 @@ indexRouter.post("/new", (req, res) => {
   res.redirect("/");
 });
 
+indexRouter.get("/:username/:date/:message", (req, res) => {
+  res.render("message", {
+    title: `${req.params.username}'s Message!`,
+    username: req.params.username,
+    date: req.params.date,
+    message: req.params.message,
+  });
+});
+
 module.exports = indexRouter;

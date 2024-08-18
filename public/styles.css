@@ -8,7 +8,7 @@ body {
   font-weight: 500;
 }
 
-nav {
+nav.navBar {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
