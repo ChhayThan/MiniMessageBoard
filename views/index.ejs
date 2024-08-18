@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head', { title: title}) %>
+  <body>
+    <%- include('./partials/navBar') %>
+    <div class="messageContainer">
+      <% messages.forEach((message) => { %>
+      <div class="message">
+        <h1><%= message.user %></h1>
+        <h2><%= message.added %></h2>
+        <p><%= message.text %></p>
+      </div>
+      <% }) %>
+    </div>
+  </body>
+</html>
