@@ -32,12 +32,14 @@ indexRouter.post("/new", (req, res) => {
   res.redirect("/");
 });
 
-indexRouter.get("/:username/:date/:message", (req, res) => {
+indexRouter.get("/message/:index", (req, res) => {
+  const message = messages[req.params.index];
+
   res.render("message", {
-    title: `${req.params.username}'s Message!`,
-    username: req.params.username,
-    date: req.params.date,
-    message: req.params.message,
+    title: `${message.user}'s Message!`,
+    username: message.user,
+    date: message.added,
+    message: message.text,
   });
 });
 
