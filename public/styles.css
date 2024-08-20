@@ -106,3 +106,7 @@ form button:hover {
 form button:active {
   transform: translateY(2px);
 }
+
+ul.errorUL {
+  text-align: center;
+}
